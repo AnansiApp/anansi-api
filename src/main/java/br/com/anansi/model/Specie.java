@@ -1,26 +1,55 @@
 package br.com.anansi.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "TB_SPECIE")
 public class Specie {
 
-    public Specie(String name, String distribution, Boolean medicalImportance) {
-        this.name = name;
-        this.distribution = distribution;
-        this.medicalImportance = medicalImportance;
+    @Id
+    @Column(name = "CO_SEQ_SPECIE")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "NAME", nullable = false)
+    private String name;
+
+    @Column(name = "DISTRIBUTION", nullable = false)
+    private String distribution;
+
+    @Column(name = "MEDICAL_IMPORTANCE", nullable = false)
+    private Boolean medicalImportance;
+
+
+    public Long getId() {
+        return id;
     }
 
-    private String name;
-    private String distribution;
-    private Boolean medicalImportance;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDistribution() {
         return distribution;
     }
 
+    public void setDistribution(String distribution) {
+        this.distribution = distribution;
+    }
+
     public Boolean getMedicalImportance() {
         return medicalImportance;
+    }
+
+    public void setMedicalImportance(Boolean medicalImportance) {
+        this.medicalImportance = medicalImportance;
     }
 }
