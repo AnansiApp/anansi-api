@@ -12,10 +12,10 @@ public class CharacteristicQuestion {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "CO_QUESTION")
+    @JoinColumn(name = "CO_QUESTION", nullable = false)
     private Question question;
 
-    @Column(name = "DESCRIPTION")
+    @Column(name = "DESCRIPTION", nullable = false)
     private String description;
 
     public Long getId() {

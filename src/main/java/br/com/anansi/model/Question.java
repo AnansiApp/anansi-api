@@ -14,6 +14,25 @@ public class Question {
     @Column(name = "CONTENT", nullable = false)
     private String content;
 
+    @Column(name = "FIRST")
+    private Boolean first;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Boolean getFirst() {
+        return first;
+    }
+
+    public void setFirst(Boolean first) {
+        this.first = first;
+    }
+
     public String getContent() {
         return content;
     }

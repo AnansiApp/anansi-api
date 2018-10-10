@@ -1,5 +1,6 @@
 package br.com.anansi.service;
 
+import br.com.anansi.model.CharacteristicQuestion;
 import br.com.anansi.model.Specie;
 import br.com.anansi.repository.SpecieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +18,11 @@ public class SpiderService {
     private SpecieRepository specieRepository;
 
     public List<Specie> findAllSpecies(){
-
         return specieRepository.findAll();
+    }
+
+    public List<Specie> findResult(List<Long> characteristics){
+        return specieRepository.findByCharacteristics(characteristics);
     }
 
 }

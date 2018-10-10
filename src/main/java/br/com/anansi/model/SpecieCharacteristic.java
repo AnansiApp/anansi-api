@@ -13,11 +13,11 @@ public class SpecieCharacteristic {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="CO_SPECIE")
+    @JoinColumn(name="CO_SPECIE", nullable = false)
     private Specie specie;
 
     @ManyToOne
-    @JoinColumn(name = "CO_OPTION")
+    @JoinColumn(name = "CO_OPTION", nullable = false)
     private CharacteristicQuestion characteristic;
 
     public Long getId() {
