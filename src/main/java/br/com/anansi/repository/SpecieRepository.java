@@ -13,7 +13,7 @@ public interface SpecieRepository extends CrudRepository <Specie, String> {
 
     List<Specie> findAll();
 
-    @Query(value = "SELECT UNIQUE c.specie from SpecieCharacteristic c where c.characteristic.id in :characteristics")
-    List<Specie> findByCharacteristics(@Param("characteristics") List<Long> characteristics);
+    @Query(value = "SELECT c.specie from SpecieCharacteristic c where c.characteristic.id = :characteristic")
+    List<Specie> findByCharacteristics(@Param("characteristic") Long characteristic);
 
 }
