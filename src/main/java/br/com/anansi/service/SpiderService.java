@@ -1,6 +1,5 @@
 package br.com.anansi.service;
 
-import br.com.anansi.model.CharacteristicQuestion;
 import br.com.anansi.model.Specie;
 import br.com.anansi.repository.SpecieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ public class SpiderService {
 
         List<List<Specie>> lists = new ArrayList<>();
         characteristics.forEach(c -> {
-            lists.add(specieRepository.findByCharacteristics(c));
+            lists.add(specieRepository.findByCharacteristics(characteristics));
         });
 
         return getCommonElements(lists);
