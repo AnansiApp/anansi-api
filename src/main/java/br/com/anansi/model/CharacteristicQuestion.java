@@ -1,5 +1,7 @@
 package br.com.anansi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +14,7 @@ public class CharacteristicQuestion {
     private Long id;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "CO_QUESTION", nullable = false)
     private Question question;
 
