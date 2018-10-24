@@ -1,6 +1,5 @@
 package br.com.anansi.controller;
 
-import br.com.anansi.model.CharacteristicQuestion;
 import br.com.anansi.model.Specie;
 import br.com.anansi.service.SpiderService;
 import org.springframework.beans.factory.annotation.Autowired;
