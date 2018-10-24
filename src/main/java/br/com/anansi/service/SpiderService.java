@@ -18,11 +18,15 @@ public class SpiderService {
     private SpecieRepository specieRepository;
 
     public List<Specie> findAllSpecies(){
-        return specieRepository.findAll();
+        return specieRepository.findAllByOrderByName();
     }
 
     public List<Specie> findResult(List<Long> characteristics){
         return specieRepository.findByCharacteristics(characteristics);
+    }
+
+    public List<Specie> findByName(String name){
+        return specieRepository.findByNameIgnoreCaseContainingOrderByName(name);
     }
 
 }

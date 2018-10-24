@@ -11,9 +11,11 @@ import java.util.List;
 @Repository
 public interface SpecieRepository extends CrudRepository <Specie, String> {
 
-    List<Specie> findAll();
+    List<Specie> findAllByOrderByName();
 
-    @Query(value = "SELECT UNIQUE c.specie from SpecieCharacteristic c where c.characteristic.id in :characteristics")
+    @Query(value = "SELECT distinct c.specie from SpecieCharacteristic c where c.characteristic.id in :characteristics")
     List<Specie> findByCharacteristics(@Param("characteristics") List<Long> characteristics);
+
+    List<Specie> findByNameIgnoreCaseContainingOrderByName(String name);
 
 }
