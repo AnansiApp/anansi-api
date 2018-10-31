@@ -1,16 +1,21 @@
 package br.com.anansi.controller;
 
-import br.com.anansi.model.CharacteristicQuestion;
 import br.com.anansi.model.Specie;
 import br.com.anansi.service.SpiderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.util.StreamUtils;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.support.ServletContextResource;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 @RestController
@@ -19,6 +24,9 @@ public class SpiderController {
 
     @Autowired
     private SpiderService service;
+
+    @Autowired
+    ServletContext context;
 
     @RequestMapping(value = "/species", method = RequestMethod.GET)
     public ResponseEntity<List<Specie>> getSpecies(){
@@ -33,6 +41,19 @@ public class SpiderController {
     @RequestMapping(value = "/species/get", method = RequestMethod.GET)
     public ResponseEntity<List<Specie>> getSpeciesByName(@RequestParam("name") String name){
         return new ResponseEntity<>(service.findByName(name), HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/specie-image", method = RequestMethod.GET,
+            produces = MediaType.IMAGE_JPEG_VALUE)
+    public ResponseEntity<byte[]> getImage(@RequestParam("name") String specie) throws IOException {
+
+        ClassPathResource imgFile = new ClassPathResource("images-spiders/"+ specie +".jpg");
+        byte[] bytes = StreamUtils.copyToByteArray(imgFile.getInputStream());
+
+        return ResponseEntity
+                .ok()
+                .contentType(MediaType.IMAGE_JPEG)
+                .body(bytes);
     }
 
 }

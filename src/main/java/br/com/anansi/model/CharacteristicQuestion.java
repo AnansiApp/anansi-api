@@ -21,6 +21,9 @@ public class CharacteristicQuestion {
     @Column(name = "DESCRIPTION", nullable = false)
     private String description;
 
+    @Column(name = "IMAGE_ADDRESS")
+    private String imageAddress;
+
     public Long getId() {
         return id;
     }
@@ -43,5 +46,13 @@ public class CharacteristicQuestion {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImageAddress() {
+        return imageAddress;
+    }
+
+    public void setImageAddress(String imageAddress) {
+        this.imageAddress = imageAddress;
     }
 }
