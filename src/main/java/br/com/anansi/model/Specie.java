@@ -1,6 +1,7 @@
 package br.com.anansi.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_SPECIE")
@@ -19,6 +20,11 @@ public class Specie {
 
     @Column(name = "MEDICAL_IMPORTANCE", nullable = false)
     private Boolean medicalImportance;
+
+    @ElementCollection
+    @CollectionTable(name= "TB_IMAGE_SPECIE", joinColumns = @JoinColumn(name = "CO_SEQ_SPECIE"))
+    @Column(name = "ADDRESS")
+    private List<String> imageAddresses;
 
 
     public Long getId() {
@@ -51,5 +57,13 @@ public class Specie {
 
     public void setMedicalImportance(Boolean medicalImportance) {
         this.medicalImportance = medicalImportance;
+    }
+
+    public List<String> getImageAddresses() {
+        return imageAddresses;
+    }
+
+    public void setImageAddresses(List<String> imageAddresses) {
+        this.imageAddresses = imageAddresses;
     }
 }

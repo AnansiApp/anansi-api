@@ -5,6 +5,7 @@ import br.com.anansi.service.SpiderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -41,19 +42,6 @@ public class SpiderController {
     @RequestMapping(value = "/species/get", method = RequestMethod.GET)
     public ResponseEntity<List<Specie>> getSpeciesByName(@RequestParam("name") String name){
         return new ResponseEntity<>(service.findByName(name), HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/specie-image", method = RequestMethod.GET,
-            produces = MediaType.IMAGE_JPEG_VALUE)
-    public ResponseEntity<byte[]> getImage(@RequestParam("name") String specie) throws IOException {
-
-        ClassPathResource imgFile = new ClassPathResource("images-spiders/"+ specie +".jpg");
-        byte[] bytes = StreamUtils.copyToByteArray(imgFile.getInputStream());
-
-        return ResponseEntity
-                .ok()
-                .contentType(MediaType.IMAGE_JPEG)
-                .body(bytes);
     }
 
 }
