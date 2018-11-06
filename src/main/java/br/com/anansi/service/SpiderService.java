@@ -22,7 +22,7 @@ public class SpiderService {
     }
 
     public List<Specie> findResult(List<Long> characteristics){
-        return specieRepository.findByCharacteristics(characteristics);
+        return specieRepository.findByCharacteristics(characteristics, new Long(characteristics.size()));
     }
 
     public List<Specie> findByName(String name){
