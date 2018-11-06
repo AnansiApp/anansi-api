@@ -13,8 +13,8 @@ public interface SpecieRepository extends CrudRepository <Specie, String> {
 
     List<Specie> findAllByOrderByName();
 
-    @Query(value = "SELECT distinct c.specie from SpecieCharacteristic c where c.characteristic.id in :characteristics")
-    List<Specie> findByCharacteristics(@Param("characteristics") List<Long> characteristics);
+    @Query(value = "SELECT distinct c.specie from SpecieCharacteristic c where c.characteristic.id in :characteristics group by c.specie.id having count (c.specie) = :numFilters")
+    List<Specie> findByCharacteristics(@Param("characteristics") List<Long> characteristics, @Param("numFilters") Long numFilters);
 
     List<Specie> findByNameIgnoreCaseContainingOrderByName(String name);
 
