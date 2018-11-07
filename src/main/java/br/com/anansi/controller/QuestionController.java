@@ -37,18 +37,4 @@ public class QuestionController {
         return new ResponseEntity<>(service.getNextQuestion(idCurrentQuestion, idOption), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/option_image", method = RequestMethod.GET,
-            produces = MediaType.IMAGE_JPEG_VALUE)
-    public ResponseEntity<byte[]> getImage(@RequestParam("address") String address) throws IOException {
-
-        ClassPathResource imgFile = new ClassPathResource(address);
-        byte[] bytes = StreamUtils.copyToByteArray(imgFile.getInputStream());
-
-        final HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.IMAGE_JPEG);
-
-        return new ResponseEntity<>(bytes, headers, HttpStatus.OK);
-
-    }
-
 }
