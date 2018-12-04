@@ -27,4 +27,12 @@ public class QuestionService {
     public Question getNextQuestion(Long idCurrent, Long idOption){
         return questionRepository.findNextQuestion(idCurrent, idOption);
     }
+
+    public Question getNextQuestion(List<Long> questions){
+        Question question = questionRepository.findFirstByFirstAndIdNotIn(true, questions);
+        if(question == null){
+            question = questionRepository.findFirstByIdNotIn(questions);
+        }
+        return question;
+    }
 }

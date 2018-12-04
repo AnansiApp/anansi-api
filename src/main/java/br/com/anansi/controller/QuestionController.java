@@ -37,4 +37,9 @@ public class QuestionController {
         return new ResponseEntity<>(service.getNextQuestion(idCurrentQuestion, idOption), HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/next_question_index_random", method = RequestMethod.GET)
+    public ResponseEntity<Question> getSpeciesOptionsNoOption(@RequestParam("id") List<Long> questions){
+        return new ResponseEntity<>(service.getNextQuestion(questions), HttpStatus.OK);
+    }
+
 }
