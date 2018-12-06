@@ -4,16 +4,39 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "TB_SPECIE")
-public class Specie {
+@Table(name = "TB_FAMILY")
+public class Family {
 
     @Id
-    @Column(name = "CO_SEQ_SPECIE")
+    @Column(name = "CO_SEQ_FAMILY")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "NAME", nullable = false)
     private String name;
+
+//    @Column(name = "POPULAR_NAME")
+//    private String popularName;
+//
+//    @Column(name = "HABIT_LIFE")
+//    private String habitLife;
+//
+//    @Column(name = "SIZE")
+//    private String size;
+//
+//    @Column(name = "EYES")
+//    private String eyes;
+//
+//    @Column(name = "OTHER_CHARACTERISTICS")
+//    private String othersCharacteristics;
+//
+//    @Column(name = "TIME_YEAR")
+//    private String timeYear;
+
+    @ElementCollection
+    @CollectionTable(name= "TB_IMAGE_FAMILY", joinColumns = @JoinColumn(name = "CO_SEQ_FAMILY"))
+    @Column(name = "ADDRESS")
+    private List<String> families;
 
     @Column(name = "DISTRIBUTION", nullable = false)
     private String distribution;
@@ -22,7 +45,7 @@ public class Specie {
     private Boolean medicalImportance;
 
     @ElementCollection
-    @CollectionTable(name= "TB_IMAGE_SPECIE", joinColumns = @JoinColumn(name = "CO_SEQ_SPECIE"))
+    @CollectionTable(name= "TB_IMAGE_FAMILY", joinColumns = @JoinColumn(name = "CO_SEQ_FAMILY"))
     @Column(name = "ADDRESS")
     private List<String> imageAddresses;
 

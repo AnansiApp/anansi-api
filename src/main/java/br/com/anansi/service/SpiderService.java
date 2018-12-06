@@ -1,8 +1,7 @@
 package br.com.anansi.service;
 
-import br.com.anansi.model.CharacteristicQuestion;
-import br.com.anansi.model.Specie;
-import br.com.anansi.repository.SpecieRepository;
+import br.com.anansi.model.Family;
+import br.com.anansi.repository.FamilyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,18 +13,18 @@ import java.util.List;
 public class SpiderService {
 
     @Autowired
-    private SpecieRepository specieRepository;
+    private FamilyRepository familyRepository;
 
-    public List<Specie> findAllSpecies(){
-        return specieRepository.findAllByOrderByName();
+    public List<Family> findAllFamilies(){
+        return familyRepository.findAllByOrderByName();
     }
 
-    public List<Specie> findResult(List<Long> characteristics){
-        return specieRepository.findByCharacteristics(characteristics, new Long(characteristics.size()));
+    public List<Family> findResult(List<Long> characteristics){
+        return familyRepository.findByCharacteristics(characteristics, new Long(characteristics.size()));
     }
 
-    public List<Specie> findByName(String name){
-        return specieRepository.findByNameIgnoreCaseContainingOrderByName(name);
+    public List<Family> findByName(String name){
+        return familyRepository.findByNameIgnoreCaseContainingOrderByName(name);
     }
 
 }

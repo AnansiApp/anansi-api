@@ -3,18 +3,18 @@ package br.com.anansi.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "RL_SPECIE_CHARACTERISTIC")
-public class SpecieCharacteristic {
+@Table(name = "RL_FAMILY_CHARACTERISTIC")
+public class FamilyCharacteristic {
 
 
     @Id
-    @Column(name = "CO_SEQ_SPECIE_CHARACTERISTIC")
+    @Column(name = "CO_SEQ_FAMILY_CHARACTERISTIC")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name="CO_SPECIE", nullable = false)
-    private Specie specie;
+    @JoinColumn(name="CO_FAMILY", nullable = false)
+    private Family family;
 
     @ManyToOne
     @JoinColumn(name = "CO_OPTION", nullable = false)
@@ -28,12 +28,12 @@ public class SpecieCharacteristic {
         this.id = id;
     }
 
-    public Specie getSpecie() {
-        return specie;
+    public Family getFamily() {
+        return family;
     }
 
-    public void setSpecie(Specie specie) {
-        this.specie = specie;
+    public void setFamily(Family family) {
+        this.family = family;
     }
 
     public CharacteristicQuestion getCharacteristic() {
