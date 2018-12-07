@@ -41,6 +41,7 @@ public class Family {
     @Column(name = "ADDRESS")
     private List<String> imageAddresses;
 
+    private String principalImage;
 
     public Long getId() {
         return id;
@@ -68,6 +69,16 @@ public class Family {
 
     public List<String> getImageAddresses() {
         return imageAddresses;
+    }
+
+    public String getPrincipalImage(){
+        for (String address :
+                imageAddresses) {
+            if(address.contains("P.jpg")){
+                this.principalImage = address;
+            }
+        }
+        return  principalImage;
     }
 
     public void setImageAddresses(List<String> imageAddresses) {
