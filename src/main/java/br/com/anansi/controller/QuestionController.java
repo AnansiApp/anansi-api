@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -29,13 +28,11 @@ public class QuestionController {
     }
 
     @RequestMapping(value = "/next_question", method = RequestMethod.GET)
-    public ResponseEntity<Question> getNextQuestion (@RequestParam("idCurrentQuestion") long idCurrentQuestion, @RequestParam("idOption") long idOption){
-        return new ResponseEntity<>(service.getNextQuestion(idCurrentQuestion, idOption), HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/next_question_index_random", method = RequestMethod.GET)
-    public ResponseEntity<Question> getSNextQuestionNoOption(@RequestParam("id") List<Long> questions){
-        return new ResponseEntity<>(service.getNextQuestion(questions), HttpStatus.OK);
+    public ResponseEntity<Question> getNextQuestion (@RequestParam("idCurrentQuestion") long idCurrentQuestion,
+                                                     @RequestParam(value = "idOption", required=false) Long idOption,
+                                                     @RequestParam(value = "idCharacteristics", required=false) List<Long> characteristics,
+                                                     @RequestParam("idQuestions") List<Long> questions){
+        return new ResponseEntity<>(service.getNextQuestion(idCurrentQuestion, idOption, questions, characteristics), HttpStatus.OK);
     }
 
 }
