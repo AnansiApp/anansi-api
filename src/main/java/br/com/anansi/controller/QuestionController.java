@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping(value = "/api/question")
 public class QuestionController {
 
     @Autowired
@@ -27,8 +28,11 @@ public class QuestionController {
     }
 
     @RequestMapping(value = "/next_question", method = RequestMethod.GET)
-    public ResponseEntity<Question> getNextQuestion (@RequestParam("idCurrentQuestion") long idCurrentQuestion, @RequestParam("idOption") long idOption){
-        return new ResponseEntity<>(service.getNextQuestion(idCurrentQuestion, idOption), HttpStatus.OK);
+    public ResponseEntity<Question> getNextQuestion (@RequestParam("idCurrentQuestion") long idCurrentQuestion,
+                                                     @RequestParam(value = "idOption", required=false) Long idOption,
+                                                     @RequestParam(value = "idCharacteristics", required=false) List<Long> characteristics,
+                                                     @RequestParam("idQuestions") List<Long> questions){
+        return new ResponseEntity<>(service.getNextQuestion(idCurrentQuestion, idOption, questions, characteristics), HttpStatus.OK);
     }
 
 }

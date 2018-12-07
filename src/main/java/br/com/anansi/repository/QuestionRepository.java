@@ -23,4 +23,7 @@ public interface QuestionRepository extends CrudRepository<Question, String> {
     @Query(value = "SELECT n.nextQuestion FROM NextQuestion n where n.currentQuestion.id = :idCurrent and n.response.id = :idOption")
     Question findNextQuestion(@Param("idCurrent") Long idCurrent, @Param("idOption") Long idOption);
 
+    Question findFirstByFirstAndIdNotIn(Boolean first, List<Long> questions);
+
+    Question findFirstByIdNotIn(List<Long> questions);
 }

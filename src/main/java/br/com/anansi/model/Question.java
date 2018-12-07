@@ -1,6 +1,7 @@
 package br.com.anansi.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "TB_QUESTION")
@@ -14,6 +15,9 @@ public class Question {
     @Column(name = "CONTENT", nullable = false)
     private String content;
 
+    @OneToMany(mappedBy = "question", fetch = FetchType.LAZY)
+    private List<CharacteristicQuestion> options;
+
     @Column(name = "FIRST")
     private Boolean first;
 
@@ -23,6 +27,14 @@ public class Question {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public List<CharacteristicQuestion> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<CharacteristicQuestion> options) {
+        this.options = options;
     }
 
     public Boolean getFirst() {
