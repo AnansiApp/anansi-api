@@ -1,19 +1,19 @@
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (1, 'Theraphosidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (2, 'Lycosidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (3, 'Ctenidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (4, 'Pholcidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (5, 'Araneidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (6, 'Theridiidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (7, 'Sparassidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (8, 'Salticidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (9, 'Scytodidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (10, 'Anyphaenidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (11, 'Actinopodidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (12, 'Thomisidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (13, 'Linyphiidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (14, 'Corinnidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (15, 'Sicariidae' , 'Centro Oeste', false );
-INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, DISTRIBUTION, MEDICAL_IMPORTANCE) VALUES (16, 'Oxyopidae' , 'Centro Oeste', false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (1, 'Theraphosidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (2, 'Lycosidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (3, 'Ctenidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (4, 'Pholcidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (5, 'Araneidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (6, 'Theridiidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (7, 'Sparassidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (8, 'Salticidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (9, 'Scytodidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (10, 'Anyphaenidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (11, 'Actinopodidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (12, 'Thomisidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (13, 'Linyphiidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (14, 'Corinnidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (15, 'Sicariidae' , false );
+INSERT INTO TB_FAMILY (CO_SEQ_FAMILY, NAME, MEDICAL_IMPORTANCE) VALUES (16, 'Oxyopidae' , false );
 
 INSERT INTO TB_QUESTION (CO_SEQ_QUESTION, CONTENT, FIRST ) VALUES (1, 'Em que ambiente foi avistada?', true);
 INSERT INTO TB_CHARACTERISTIC_QUESTION (CO_SEQ_OPTION, DESCRIPTION, CO_QUESTION, IMAGE_ADDRESS) VALUES (1, 'Ambiente Urbano (quintal, parques, etc)', 1, 'images-options/1.jpg');
@@ -178,18 +178,6 @@ INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, C
 INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (101, 9, 21);
 INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (102, 9, 24);
 
---Características Scytodidae
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (103, 9, 1);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (104, 9, 2);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (105, 9, 5);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (106, 9, 7);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (107, 9, 10);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (108, 9, 14);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (109, 9, 15);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (110, 9, 19);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (111, 9, 21);
-INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (112, 9, 24);
-
 --Características Anyphaenidae
 INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (113, 10, 1);
 INSERT INTO RL_FAMILY_CHARACTERISTIC (CO_SEQ_FAMILY_CHARACTERISTIC, CO_FAMILY, CO_OPTION) VALUES (114, 10, 3);
@@ -345,3 +333,335 @@ INSERT INTO TB_IMAGE_FAMILY (CO_SEQ_FAMILY, ADDRESS) VALUES (15, 'images-spiders
 INSERT INTO TB_IMAGE_FAMILY (CO_SEQ_FAMILY, ADDRESS) VALUES (16, 'images-spiders/oxyopidae/1.jpg');
 INSERT INTO TB_IMAGE_FAMILY (CO_SEQ_FAMILY, ADDRESS) VALUES (16, 'images-spiders/oxyopidae/2.jpg');
 
+
+
+
+
+------------------------------INFORMAÇÕES DAS FAMÍLIAS-----------------------------------------------
+
+
+
+
+-- Theraphosidae
+
+UPDATE TB_FAMILY
+SET
+  POPULAR_NAME =        'Aranha Caranguejeira',
+  MEDICAL_IMPORTANCE =  'Causam pavor pela aparência, mas a má fama é injustificada, pois raramente picam, e o veneno ' ||
+                        ' é praticamente inofensivo, causando dor local ou no membro, principalmente pelo efeito mecânico ' ||
+                        'da quelícera. Possuem, entretanto, um tipo de defesa diferente, que são os microscópicos pelos urticantes, os quais são ' ||
+                        'liberados do abdômen por fricção do quarto par de pernas, causando irritação e coceira.',
+
+  HABIT_LIFE =          'As caranguejeiras vivem em abrigos no solo (buracos, debaixo de rochas, troncos caídos, cupinzeiros, etc.), ' ||
+                        'normalmente forrando o substrato com fios de seda. Algumas espécies são arborícolas, vivendo em refúgios que ' ||
+                        'constroem com seda nos troncos ou buracos das árvores. Principalmente durante a noite, as aranhas esperam de tocaia ' ||
+                        'nos seus abrigos ou caçam nos arredores, geralmente retornando aos mesmos refúgios. Não costumam perseguir a presa, ' ||
+                        'só atacam se ela estiver muito próxima.',
+
+  BODY_SIZE =           'Aranhas de tamanho médio a muito grande (1,3 a 9,0 cm), entre elas a maior aranha do mundo, Theraphosa blondi ' ||
+                        '(Amazônia – Brasil, Venezuela, Guiana).',
+
+  OTHER_CHARACTERISTICS='No Cerrado ocorrem cerca de 30 espécies, entre elas Acanthoscurria aff. gomesiana, Acanthoscurria paulensis e Lasiodora sp.',
+  EYES =                'Os oito olhos encontram-se agrupados em um montículo, próximo à borda da carapaça.',
+  TIME_YEAR =           'Os machos errantes são encontrados, em geral e dependente da espécie, do início (outubro a ' ||
+                        'novembro) ao fim da estação chuvosa (abril, maio), época do acasalamento.'
+WHERE CO_SEQ_FAMILY = 1;
+
+
+-- Lycosidae
+
+
+UPDATE TB_FAMILY
+SET
+  POPULAR_NAME =        'Aranha de Grama',
+
+  MEDICAL_IMPORTANCE =  'Apesar da má fama, a importância médica destas aranhas é insignificante. O veneno causa apenas ' ||
+                        'dor local pelo efeito mecânico da injeção da quelícera (pequena agulha) e eventualmente uma ferida.',
+
+  HABIT_LIFE =          'São aranhas cursoriais e noturnas, em geral. Durante o dia ficam em abrigos do solo. Podem caçar a e' ||
+                        'spreita ou procurar pela presa, algumas são buraqueiras, outras são associadas à água e uma espécie ' ||
+                        '(Aglaoctenus lagotis) faz teia em funil.',
+
+  BODY_SIZE =           'O tamanho é variável, de muito pequeno (menores que 0,5 cm) a médio (quase 3 cm)',
+  EYES =                'Arranjo ocular 4-2-2 (três fileiras de olhos, a primeira com quatro olhos pequenos em linha reta na frente ' ||
+                        'da carapaça, na segunda e terceira linhas os dois olhos são dorsais, e arranjados em forma de trapézio ' ||
+                        'mais largo posteriormente).',
+
+  OTHER_CHARACTERISTICS='O saco de ovos (arredondado) é carregado pela fêmea, na parte posterior do abdômen, nas fiandeiras. ' ||
+                        'Após a eclosão, os filhotes sobem no dorso do abdômen da mãe. Existem entre 25 e 30 espécies no cerrado, cujos ' ||
+                        'representantes frequentemente entram nas nossas casas; Lycosa erythrognatha, Hogna gumia, Trochosa sp., ' ||
+                        'Lycosa inornata, Arctosa sp.',
+
+  TIME_YEAR =           'Ocorrem durante o ano todo, sendo comuns em ambientes rurais e urbanos, em campos, terrenos baldios, ' ||
+                        'jardins, parques, gramados e quintais; ocasionalmente invadem residências.'
+WHERE CO_SEQ_FAMILY = 2;
+
+
+-- Ctenidae
+
+UPDATE TB_FAMILY
+SET
+  POPULAR_NAME =        'Aranhas de Chão; Aranha Armadeira',
+  MEDICAL_IMPORTANCE =  'O gênero Phoneutria, a famosa aranha-armadeira; aranha grande, de 3 a quase 5 cm de corpo; lateralmente, ' ||
+                        'com as pernas estendidas, pode atingir de 12 a 15 cm, ou mais. O nome popular é bastante apropriado, pois ' ||
+                        'quando ameaçada, assume postura agressiva (“armando o bote”). Levanta o corpo apoiando-se nos dois últimos pares ' ||
+                        'de pernas, ergue as pernas anteriores, que possuem contrastes ventrais de claro e escuro, e expõe o abdômen ventral ' ||
+                        'escuro com listras claras que convergem em direção às fiandeiras; também abre os ferrões e eriça os espinhos das ' ||
+                        'pernas. Nesta posição, acompanha o movimento do agressor; é rápida, podendo dar pequenos pulos, e se defende atacando. ' ||
+                        'A picada causa dor intensa local e generalizada, sudorese e pilo-ereção, podendo ocorrer febre, taquicardia, vômitos, ' ||
+                        'vertigens, asfixia e priapismo (ereção duradoura). Estes efeitos, apesar de moderados a intensos, são passageiros, pois a ' ||
+                        'grande maioria das vítimas (97%) se recupera dentro de um a três dias, sem necessidade de tratamento com soro. É a ' ||
+                        'segunda aranha mais importante no Brasil, atrás de Loxosceles, sendo responsável por cerca de 30% dos acidentes. Apesar ' ||
+                        'de ser considerada aranha de solo, Phoneutria é frequentemente encontrada em plantas (aranha-da-banana é um dos ' ||
+                        'nomes populares) e outras superfícies verticais, como paredes das casas. No Cerrado ocorrem Phoneutria nigriventer ' ||
+                        '(aranha  comum no Sul e Sudeste do Brasil, mas ocorrendo também no DF e sul de Goiás e do Mato Grosso do Sul) e ' ||
+                        'Phoneutria eickstedtae (principal espécie do Cerrado, ocorrendo no Centro-Oeste e sul de Tocantins). são encontradas ' ||
+                        'praticamente o ano todo, com maior abundância entre março a junho ou até setembro.',
+
+  HABIT_LIFE =          'Andam pelo chão, principalmente durante a noite, podendo ocorrer também em superfícies verticais, na vegetação ou associadas à água',
+
+  BODY_SIZE =           'Médio a grande porte (1 a 4 cm)',
+
+  EYES =                'Disposição ocular típica, com dois olhos anteriores e medianos, uma fileira de quatro e outra de dois olhos ' ||
+                        '(2-4-2), muitas vezes parecendo olhos 2-6',
+
+  OTHER_CHARACTERISTICS='No DF são raras nas áreas urbanas com concentração de prédios e afastadas do ambiente natural, mas podem ser comuns ' ||
+                        'em ambientes periurbanos ou rurais. O saco de ovos (achatado) é carregado pela fêmea, na parte anterior do corpo, nas quelíceras. ' ||
+                        'Ocorrem cerca de 20 a 25 espécies no Cerrado, Ctenus ornatus, Isoctenus, Parabatinga brevipes, Phoneutria. Ocorrem entre 20 a 30 ' ||
+                        'espécies no Cerrado, no mínimo. Em Brasília, as espécies urbanas mais comuns são Crossopriza lyoni, Physocyclus globosus e Smeringopus pallidus. ',
+
+  TIME_YEAR =           'Os machos errantes apresentam dois picos de abundância, em abril e maio (transição chuva-seca) e outro, muito mais marcante, ' ||
+                        'em outubro e novembro (transição seca-chuva)'
+WHERE CO_SEQ_FAMILY = 3;
+
+
+--Pholcidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha Pernuda',
+MEDICAL_IMPORTANCE =    'Não possui',
+HABIT_LIFE =            '-',
+BODY_SIZE =             'Corpo pequeno (geralmente menor que 1 cm).',
+EYES =                  'Com seis ou oito olhos: dois grupos de três olhos pouco afastados, geralmente com outros dois olhos, menores e anteriores, entre os grupos.',
+OTHER_CHARACTERISTICS = 'Pernas muito longas e finas; Ocorrem principalmente em locais escuros, sob objetos do solo, folhiço, em plantas, cavidades do solo ou de ' ||
+                        'rochas, etc; nas construções humanas, em cantos, atrás de móveis, etc.. A estrutura da teia consiste de um emaranhado tridimensional de ' ||
+                        'fios sem qualquer projeto aparente, mas também pode ocorrer uma teia em malha, em forma de domo, com um emaranhado de fios acima da malha. ' ||
+                        'Consideradas como aranhas de sujeira, são as principais responsáveis pelas teias capturadas pelas vassouras e outros instrumentos de limpeza ' ||
+                        'Ocorrem entre 20 a 30 espécies no Cerrado, no mínimo. Em Brasília, as espécies urbanas mais comuns são Crossopriza lyoni, Physocyclus globosus ' ||
+                        'e Smeringopus pallidus. Ocorrem entre 20 a 30 espécies no Cerrado, no mínimo. Em Brasília, as espécies urbanas mais comuns são Crossopriza lyoni, ' ||
+                         'Physocyclus globosus e Smeringopus pallidus. ',
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 4;
+
+--Araneidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha de teia',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            'Vivem em teia orbicular, geralmente vertical.',
+BODY_SIZE =             'Tamanho variável, de 0,1 a 2,5 cm.',
+EYES =                  'Com oito olhos em duas linhas de quatro. Os olhos laterais são, em geral, adjacentes e distantes dos quatro olhos ' ||
+                        'medianos, os quais formam um trapézio.',
+OTHER_CHARACTERISTICS = 'Existem erca de 300 espécies no Cerrado. Os principais gêneros são:  Acacesia, Alpaida, Araneus, Argiope, Cyclosa, ' ||
+                        'Eriophora, Gasteracantha, Micrathena, Parawixia, Nephila.',
+TIME_YEAR =             'Principais espécies ocorre de abril a junho, transição entre a estação das chuvas e o período da seca. '
+WHERE CO_SEQ_FAMILY = 5;
+
+--Theridiidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha-preta ou Viúva-negra',
+MEDICAL_IMPORTANCE =    'A viúva-negra (Latrodectus curacaviensis) talvez a única espécie peçonhenta de Theridiidae no Brasil, ' ||
+                        'é rara no Cerrado, exceto talvez na sua porção sul e em regiões de transição com áreas de influência da ' ||
+                        'Mata Atlântica. Ao contrário de sua prima famosa, a viúva-marrom (Latrodectus geometricus) é muito comum ' ||
+                        'tanto em áreas naturais do Cerrado quanto em ambientes urbanos, mas possui pouca importância médica; ' ||
+                        'a picada causa apenas sintomas locais, como dor (que pode se irradiar para o membro), sensação de queimadura ' ||
+                        'e inflamação, raramente apresenta efeitos sistêmicos.',
+
+HABIT_LIFE =            'Teias aéreas, irregulares e difusas.',
+BODY_SIZE =             'Muito pequenas a médias (0,2 a 1,5 cm)',
+EYES =                  'Oito olhos em duas linhas de quatro, olhos laterais adjacentes um ao outro',
+OTHER_CHARACTERISTICS = 'Geralmente com o abdômen globoso ou semiesférico, elevado; A característica distinta é um pente de cerdas ' ||
+                        'serrilhadas na ponta da quarta perna. Existem cerca de 100 espécies no Cerrado, até o momento, mas estima-se ' ||
+                        'no mínimo o dobro de espécies. Destaque para Latrodectus geometricus, Nesticodes rufipes, Anelosimus, ' ||
+                        'Cryptacheae, Dipoena, Theridion, Steatoda e Janula.',
+
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 6;
+
+--Sparassidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha de teto',
+MEDICAL_IMPORTANCE =    'A picada é praticamente inofensiva, causando dor imediata e passageira, devido ao dano mecânico relacionado ao ' ||
+                        'tamanho do dente da quelícera, com raros efeitos sistêmicos (efeito da picada que afeta todo o corpo).',
+
+HABIT_LIFE =            'Vivem preferencialmente em superfícies verticais, como rochas e troncos de árvores, mas podem ser encontradas ' ||
+                        'em diversos outros locais, tanto na vegetação quanto no chão, ou na parede e teto de residências afastadas de grandes centros urbanos.',
+BODY_SIZE =             'Pequeno a médio (0,7 a 3,0 cm).',
+EYES =                  'Oito olhos em duas fileiras de quatro.',
+
+OTHER_CHARACTERISTICS = 'Achatadas e com pernas voltadas para as laterais do corpo, algumas são um pouco peludas. Ocorrem entre 15 a 20 espécies no Cerrado, ' ||
+                        'principalmente dos gêneros Olios, Polybetes e Quemedice, ',
+TIME_YEAR =             'O ano todo, sendo os machos encontrados de abril a dezembro.'
+WHERE CO_SEQ_FAMILY = 7;
+
+--Salticidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Papa-moscas',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            'Muitas espécies vivem na vegetação, e outras no solo.',
+BODY_SIZE =             'Pequenas (0,3 a 1,7 cm)',
+EYES =                  'Disposição dos olhos em três fileiras (4-2-2): quatro olhos na frente, sendo que os dois do meio são grandes, ' ||
+                        'parecendo dois faróis; as outras duas filas são compostas por dois olhos cada, posicionados mais próximos ' ||
+                        'da lateral da carapaça; os olhos da fila intermediária geralmente são menores e não tão evidentes.',
+OTHER_CHARACTERISTICS = 'Geralmente inconfundíveis por serem pequenas e pelo hábito de saltar. Grande diversidade de formato ' ||
+                        'de corpo e coloração. Corpo curto e atarracado, ou longo; brilhantemente coloridas ou ou com cores ' ||
+                        'neutras; camufladas, se confundindo com o substrato (troncos, pedras, etc.); miméticas, algumas espécies imitam formigas. ' ||
+                        'Os gêneros mais encontrados são Ailluticus (chão), Amphidraus (chão ou troncos de árvores), Breda (chão/planta), ' ||
+                        'Chira (planta), Corythalia (chão), Frigga (chão/planta), Hasarius (chão/planta), Lyssomanes (chão/planta), ' ||
+                        'Menemerus (paredes e etc.), Phiale (chão/planta), Plexippus (paredes e etc.), Sassacus (planta), Sitticus (chão/planta) e Thiodina (planta).',
+TIME_YEAR =             'Ocorrem durante todo o ano. Existem cerca de 200 espécies (o que deve representar uma subestimativa do número de espécies). '
+WHERE CO_SEQ_FAMILY = 8;
+
+--Scytodidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aaranha-cuspideira',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            '-',
+BODY_SIZE =             'Pequenas (0,4 a 1,1 cm)',
+EYES =                  'Mom seis olhos dispostos em três grupos (um par anterior e mediano e dois pares posteriores e laterais).',
+OTHER_CHARACTERISTICS = 'Carapaça decorada com padrões característicos, com a parte posterior elevada, pernas finas. Podem ser cursoriais ' ||
+                        'ou viver em pequenas teias irregulares, no solo, sob pedras e folhiço.  Devido à coloração e disposição ocular, ' ||
+                        'são às vezes confundidas com Loxosceles, mas são menores e com pernas mais finas. Ocorrem entre 10 a 15 espécies no ' ||
+                        'Cerrado, entre elas Scytodes fusca, espécie de coloração amarronzada e comum em ambientes urbanos.',
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 9;
+
+--Anyphaenidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha-fantasma',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            'Aranhas principalmente noturnas, geralmente encontradas na vegetação, mas podem andar pelo solo. ' ||
+                        'Costumam construir abrigos tubulares de seda em folhas ou outros locais.',
+BODY_SIZE =             'De 0,3 a 1,4 cm, mas geralmente menores que 1 cm.',
+EYES =                  'Oito olhos em duas filas de quatro.',
+OTHER_CHARACTERISTICS = 'Características marcantes são a posição do espiráculo traqueal, localizado no meio do ventre ou mais ' ||
+                        'próximo do sulco epigástrico, e o tufo de pelos das garras tarsais, composto por cerdas espatuladas. ' ||
+                        'Ocorrem cerca de 30 espécies no Cerrado, principalmente dos gêneros Arachosia, Aysha, Osoriella, Teudis e Xiruana.',
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 10;
+
+
+--Actinopodidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha-alçapão',
+MEDICAL_IMPORTANCE =    'Desconhecida',
+HABIT_LIFE =            'São fossoriais (vivem enterradas), construindo um tubo no solo com um revestimento que o
+                        isola do substrato adjacente e fecham a abertura utilizando uma tampa redonda, com dobradiça.
+                        O contorno da abertura é pouco perceptível e a superfície externa da porta simula o substrato ao redor.',
+BODY_SIZE =             'De 1 a 3 cm.',
+EYES =                  'Oito olhos espalhados em duas filas de quatro.',
+OTHER_CHARACTERISTICS = 'Geralmente permanecem dentro das tocas durante o dia, e à noite ficam na espreita, com a porta
+                         um pouco aberta, e só caçam se a presa passar próximo à porta. Nunca saem do túnel, exceto os
+                         machos adultos. Em geral são abundantes, mas raramente vistas devido à camuflagem.' ||
+                        'O gênero Actinopus, é o mais comum no Cerrado, com quatro a cinco.',
+TIME_YEAR =             'Os machos tornam-se errantes na estação reprodutiva (geralmente de setembro a dezembro), ou seja,
+                        abandonam seus abrigos e saem andando pelo solo, durante a noite, a procura dos abrigos das fêmeas. '
+WHERE CO_SEQ_FAMILY = 11;
+
+--Thomisidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          '-',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            'Normalmente ficam em folhas e flores, esperando a presa.',
+BODY_SIZE =             'Muito pequeno a médio (0,2 a 2,3 cm).',
+EYES =                  'Oito olhos em duas filas de quatro, geralmente sobre tubérculos esbranquiçados, ' ||
+                        'com os olhos laterais maiores que os medianos.',
+OTHER_CHARACTERISTICS = 'Dois primeiros pares de pernas maiores, mais grossos e voltados para as laterais, utilizados para capturar a presa. ' ||
+                        'No Cerrado ocorrem entre 30 a 40 espécies, principalmente dos gêneros Ceraarachne (chão), Misumenops ' ||
+                        '(principalmente planta) e Tmarus (planta/chão).',
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 12;
+
+--Linyphiidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          '-',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            'Tecem delicadas teias em malha, frequentemente com emaranhados de fios acima e abaixo da teia, entre ramos de árvores, ' ||
+                        'arbustos ou na vegetação herbácea, próximo ao solo e no folhiço. ',
+BODY_SIZE =             'Muito pequenas ou pequenas (0,1 a 0,6 cm).',
+EYES =                  'Oito olhos em duas fileiras de quatro.',
+OTHER_CHARACTERISTICS = 'Até o momento possui cerca de 30 a 40 espécies registradas no Cerrado.',
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 13;
+
+
+--Corinnidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          '-',
+MEDICAL_IMPORTANCE =    'Desconhecida.',
+HABIT_LIFE =            'Buracos no chão, embaixo de pedras, troncos, cupinzeiros, folhiço, etc; principalmente durante a noite, ' ||
+                        'esperam de tocaia nos seus abrigos ou saem andando pelo solo.',
+BODY_SIZE =             'De 0,1 a 1,5 cm.',
+EYES =                  'Oito olhos em duas filas de quatro',
+OTHER_CHARACTERISTICS = 'As principais espécies presentes no cerrado são Abapeba rioclaro, Corinna capito, Falconina gracilis, Xeropigo sp. ' ||
+                        'e aranhas da subfamília Castianeirinae, as quais costumam imitar formigas.',
+TIME_YEAR =             'Em geral, os machos errantes são encontrados do início ao meio da estação chuvosa (outubro a janeiro) e de maio ' ||
+                        'a julho (início ao meio da estação seca).'
+WHERE CO_SEQ_FAMILY = 14;
+
+--Sicariidae
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          'Aranha-marrom',
+MEDICAL_IMPORTANCE =    'Loxosceles, a famosa e temida aranha-marrom, é responsável pelo maior número de acidentes com aranhas no Brasil, ' ||
+                        'os quais ocorrem principalmente em cidades do sul do Brasil. A picada (indolor) pode causar sérias lesões na pele, e ' ||
+                        'raramente, graves efeitos sistêmicos. Pelos dados disponíveis até o momento, não ocorrem ou são raras em ambientes ' ||
+                        'urbanos do Brasil Central. No DF, por exemplo, não existem registros de ocorrência nas cidades e nem de acidentes. ' ||
+                        'No Cerrado a principal espécie é Loxosceles similis, aranha de tamanho pequeno a médio (0,7 a 1,2 cm) com seis olhos em ' ||
+                        'três grupos de dois, que vive em frestas de rochas e cascas de árvores, construindo teias irregulares, sendo comum em cavernas. ' ||
+                        'O nome popular, aranha-marrom, é muito amplo e aparenta ser pouco adequado em regiões onde ela não ocorre ou é rara, podendo ' ||
+                        'causar confusão. No Cerrado, existem outras espécies de aranhas com coloração marrom e que podem ser encontradas nas residências ' ||
+                        'e proximidades, como, por exemplo, Scytodes fusca e Isoctenus sp.',
+
+HABIT_LIFE =            'em frestas de rochas e cascas de árvores, construindo teias irregulares, sendo comum em cavernas. ',
+BODY_SIZE =             'Pequeno (0,5 - 1 cm).',
+EYES =                  'Seis olhos em três grupos de dois.',
+OTHER_CHARACTERISTICS = 'As principais espécies encontradas no Cerrado são as Loxosceles e as Sicarius.',
+TIME_YEAR =             '-'
+WHERE CO_SEQ_FAMILY = 15;
+
+--Oxyopidae
+
+
+UPDATE TB_FAMILY
+SET
+POPULAR_NAME =          '-',
+MEDICAL_IMPORTANCE =    'Não possui.',
+HABIT_LIFE =            'Vegetação herbácea e arbustiva, ou no solo, espreitando ou emboscando a presa.',
+BODY_SIZE =             'Entre 0,5 a 2,3 cm.',
+EYES =                  'Oito olhos, o clípeo (região entre os olhos e a borda anterior da carapaça, antes das quelíceras) ' ||
+                        'é alto, e o padrão de olhos é característico (dois na frente, os outros seis formam um hexágono.',
+OTHER_CHARACTERISTICS = 'Patas com espinhos longos. Possui entre sete a dez espécies no Cerrado, entre elas Oxyopes salticus.',
+TIME_YEAR =             'Comum no início das chuvas.'
+WHERE CO_SEQ_FAMILY = 16;

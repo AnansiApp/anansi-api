@@ -26,7 +26,7 @@ public class FamilyController {
     }
 
     @RequestMapping(value = "/characteristics", method = RequestMethod.GET)
-    public ResponseEntity<List<Family>> getFamiliesOptions(@RequestParam("id") List<Long> characteristcs){
+    public ResponseEntity<List<Family>> getFamiliesOptions(@RequestParam(value = "id", required=false) List<Long> characteristcs){
         return new ResponseEntity<>(service.findResult(characteristcs), HttpStatus.OK);
     }
 

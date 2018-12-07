@@ -15,34 +15,26 @@ public class Family {
     @Column(name = "NAME", nullable = false)
     private String name;
 
-//    @Column(name = "POPULAR_NAME")
-//    private String popularName;
-//
-//    @Column(name = "HABIT_LIFE")
-//    private String habitLife;
-//
-//    @Column(name = "SIZE")
-//    private String size;
-//
-//    @Column(name = "EYES")
-//    private String eyes;
-//
-//    @Column(name = "OTHER_CHARACTERISTICS")
-//    private String othersCharacteristics;
-//
-//    @Column(name = "TIME_YEAR")
-//    private String timeYear;
+    @Column(name = "POPULAR_NAME")
+    private String popularName;
 
-    @ElementCollection
-    @CollectionTable(name= "TB_IMAGE_FAMILY", joinColumns = @JoinColumn(name = "CO_SEQ_FAMILY"))
-    @Column(name = "ADDRESS")
-    private List<String> families;
+    @Column(name = "HABIT_LIFE", columnDefinition="TEXT")
+    private String habitLife;
 
-    @Column(name = "DISTRIBUTION", nullable = false)
-    private String distribution;
+    @Column(name = "BODY_SIZE")
+    private String size;
 
-    @Column(name = "MEDICAL_IMPORTANCE", nullable = false)
-    private Boolean medicalImportance;
+    @Column(name = "EYES",  columnDefinition="TEXT")
+    private String eyes;
+
+    @Column(name = "OTHER_CHARACTERISTICS", columnDefinition="TEXT")
+    private String othersCharacteristics;
+
+    @Column(name = "TIME_YEAR")
+    private String timeYear;
+
+    @Column(name = "MEDICAL_IMPORTANCE", columnDefinition="TEXT")
+    private String medicalImportance;
 
     @ElementCollection
     @CollectionTable(name= "TB_IMAGE_FAMILY", joinColumns = @JoinColumn(name = "CO_SEQ_FAMILY"))
@@ -66,19 +58,11 @@ public class Family {
         this.name = name;
     }
 
-    public String getDistribution() {
-        return distribution;
-    }
-
-    public void setDistribution(String distribution) {
-        this.distribution = distribution;
-    }
-
-    public Boolean getMedicalImportance() {
+    public String getMedicalImportance() {
         return medicalImportance;
     }
 
-    public void setMedicalImportance(Boolean medicalImportance) {
+    public void setMedicalImportance(String medicalImportance) {
         this.medicalImportance = medicalImportance;
     }
 
@@ -89,4 +73,55 @@ public class Family {
     public void setImageAddresses(List<String> imageAddresses) {
         this.imageAddresses = imageAddresses;
     }
+
+    public String getPopularName() {
+        return popularName;
+    }
+
+    public void setPopularName(String popularName) {
+        this.popularName = popularName;
+    }
+
+    public String getHabitLife() {
+        return habitLife;
+    }
+
+    public void setHabitLife(String habitLife) {
+        this.habitLife = habitLife;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getEyes() {
+        return eyes;
+    }
+
+    public void setEyes(String eyes) {
+        this.eyes = eyes;
+    }
+
+    public String getOthersCharacteristics() {
+        return othersCharacteristics;
+    }
+
+    public void setOthersCharacteristics(String othersCharacteristics) {
+        this.othersCharacteristics = othersCharacteristics;
+    }
+
+    public String getTimeYear() {
+        return timeYear;
+    }
+
+    public void setTimeYear(String timeYear) {
+        this.timeYear = timeYear;
+    }
+
 }
+
+
