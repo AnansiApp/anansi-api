@@ -3,8 +3,3 @@ jdk:
 - oraclejdk8
 script:
 - mvn test
-deploy:
-  provider: heroku
-  api_key:
-    secure: "cdbadc7b-a55e-433d-a4eb-5eaaab46423e"
-    app: anansi-unb
