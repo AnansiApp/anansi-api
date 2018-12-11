@@ -24,7 +24,7 @@ public class SpiderService {
     }
 
     public List<Family> findByName(String name){
-        return familyRepository.findByNameIgnoreCaseContainingOrderByName(name);
+        return familyRepository.findByPopularNameContainingIgnoreCaseOrNameContainingIgnoreCaseOrderByName(name, name);
     }
 
 }

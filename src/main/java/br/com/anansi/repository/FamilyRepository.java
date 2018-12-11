@@ -16,6 +16,6 @@ public interface FamilyRepository extends CrudRepository <Family, String> {
     @Query(value = "SELECT distinct c.family from FamilyCharacteristic c where c.characteristic.id in :characteristics group by c.family.id having count (c.family) = :numFilters")
     List<Family> findByCharacteristics(@Param("characteristics") List<Long> characteristics, @Param("numFilters") Long numFilters);
 
-    List<Family> findByNameIgnoreCaseContainingOrderByName(String name);
+    List<Family> findByPopularNameContainingIgnoreCaseOrNameContainingIgnoreCaseOrderByName(String popularName, String name);
 
 }
