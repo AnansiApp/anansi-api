@@ -33,8 +33,6 @@ public class QuestionService {
     public Question getNextQuestion(Long idCurrent, Long idOption, List<Long> questions, List<Long> characteristics){
 
         Question nextQuestion;
-        List<CharacteristicQuestion> optionsToRemove = new ArrayList<>();
-        List<Long> possibleIdOptions = new ArrayList<>();
 
         if(idOption == null){
             nextQuestion = getNextRandomQuestion(questions);
@@ -45,6 +43,21 @@ public class QuestionService {
         if(nextQuestion == null){
             return null;
         }
+
+        nextQuestion.getOptions().removeAll(getOptionsToRemove(nextQuestion, characteristics));
+
+        if(nextQuestion.getOptions().size() == 0){
+            questions.add(nextQuestion.getId());
+            getNextQuestion(null, null, questions, characteristics);
+        }
+
+        return nextQuestion;
+    }
+
+    private List<CharacteristicQuestion> getOptionsToRemove(Question nextQuestion, List<Long> characteristics){
+
+        List<Long> possibleIdOptions = new ArrayList<>();
+        List<CharacteristicQuestion> optionsToRemove = new ArrayList<>();
 
         if (characteristics != null) {
             possibleIdOptions.addAll(characteristics);
@@ -59,12 +72,9 @@ public class QuestionService {
             }
             possibleIdOptions.remove(option.getId());
         }
-        nextQuestion.getOptions().removeAll(optionsToRemove);
-        if(nextQuestion.getOptions().size() == 0){
-            return null;
-        }
 
-        return nextQuestion;
+        return optionsToRemove;
+
     }
 
     public Question getNextRandomQuestion(List<Long> questions){
